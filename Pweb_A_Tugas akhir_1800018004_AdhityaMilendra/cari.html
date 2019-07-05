@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyek Pemrograman Web</title>
+	<!-- Style Css -->
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<!-- Style Javascript -->
+	<script language="javascript" src="js/javascript.js"></script>
+</head>
+<body>
+<!-- Div Menubar di gunakan Untuk Mengatur Menu dan akan Pindah keh Hyperlink sesuai tujuan yang ada  !-->
+<div class="header">
+
+</div>
+	<div class="menubar">
+		<ul>
+			<li><a href="index.html"><b>Biodata</b></a></li>
+			<li><a href="materi.html"><b>Materi Kuliah</a></b></li>
+			<li><a href="cari.html"><b>Pencarian</b></a></li>
+			<li><a href="buku.html"><b>Tambah Data</b></a></li> 
+		</ul>
+</div>	
+
+<div class="menu2">
+	<br><br>
+	<h2><font color="grey">HALAMAN PENCARIAN DATA INTERAKTIF</font></h2>
+	<hr width="90%">
+
+	<br>
+
+	<form name="formcari" onSubmit="cari()"> <!-- berfungsi form pencari untuk menampilkan form pencarian yang nanti akan digabungkan dengan fungsi javascript !-->
+  	<input class="search" name="keyword" type="text" placeholder="Cari..." required>	
+  	<input class="button" type="submit" value="Cari">		
+	</form>
+	<br><br>
+
+	
+
+</div>
+<!-- fungsi javascript untuk mendeteksi bilangan dan huruf !-->
+<script>
+	function cekAngka() {
+var x, text;
+x = document.getElementById("inputAngka").value;
+if (isNaN(x) || x < 1 || x > 10) {
+text = "Input bukan angka";
+} else {
+text = "Input angka";
+}
+document.getElementById("angka").innerHTML = text;
+}
+
+</script>
+<h2>Validasi angka</h2>
+<p>Masukkan angka antara 1 dan 10:</p>
+<input id="inputAngka">
+<button type="button" onclick="
+cekAngka()">Submit</button>
+<p id="angka"></p>
+
+<!-- javascript untuk menampilkan tanggal!-->
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<!-- footer berfungsi untuk mengatur bagian bawah !-->
+<div class="footer">
+	<br>
+		<font color="#6495ED"><b>&copy</b></font>&nbsp Adhitya Milendra - Universitas Ahmad Dahlan - Yogyakarta - <font color="#6495ED"><b>2019</b></font>
+		<br>
+
+</div><body>
+
+</html>
+
+</body>
+</html>
